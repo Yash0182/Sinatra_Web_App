@@ -1,0 +1,12 @@
+<h1><!-- LOGIN TRY AGAIN --></h1>
+<h3> Entered details are invalid! </h3>
+<h4><a href="/login">Click here To Try again</a></h4>
+<table>
+<% if admin? %>
+<tr>
+<td><a href="/logout_view"><button type="button">Menu</a></td></tr>
+<tr><td><button><a href="/logout">LOGOUT</a></button></td></tr>
+<%else%>
+<a href="/"><button type="button">Menu</a>
+<% end %>
+</table>

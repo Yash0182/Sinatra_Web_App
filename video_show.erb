@@ -1,0 +1,14 @@
+<h1>Videos</h1>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/owsfdh4gxyc" frameborder="0" allowfullscreen></iframe>
+
+<br/>
+<br/>
+<table>
+<% if admin? %>
+<tr>
+<td><a href="/logout_view"><button type="button">Menu</a></td></tr>
+<tr><td><button><a href="/logout">LOGOUT</a></button></td></tr>
+<%else%>
+<a href="/"><button type="button">Back to Menu</a>
+<% end %>
+</table>

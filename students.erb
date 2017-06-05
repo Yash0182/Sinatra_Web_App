@@ -1,0 +1,31 @@
+<h1> Students HOME PAGE</h1>
+<ul>  
+  <a href = "/students/new"><button type="button"> Add new student</a>
+  <a href = "/students/searchget"> <button type="button">Show Student's details</a>
+  <a href = "/students/edit"><button type="button"> Edit Student's details</a>
+  <a href = "/students/delete"><button type="button"> Remove Student</a>
+ </ul> 
+  <h3>List of all Students</h3>
+  
+  <%@students.each do |student| -%>
+  Student_Name: <%= student.student_firstname %>
+  <details>
+  Student_ID: <%= student.student_id %><br/>
+  Student_Lastname: <%= student.student_lastname %><br/>
+  Student_Address: <%= student.student_address %><br/>
+  Student_Birthdate: <%= student.student_birthdate %><br/>
+  </details>
+  <br/>
+  <%end -%>
+  
+  <table>
+<% if admin? %>
+<tr>
+<td><a href="/logout_view"><button type="button">Menu</a></td></tr>
+<tr><td><button><a href="/logout">LOGOUT</a></button></td></tr>
+<%else%>
+<a href="/"><button type="button">Menu</a>
+<% end %>
+</table>
+
+  

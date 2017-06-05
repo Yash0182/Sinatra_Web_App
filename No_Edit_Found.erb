@@ -1,0 +1,13 @@
+<h2>OOPsss...</h2>
+<h3>Student With the given ID Does Not Exist</h3>
+<a href = "/students/edit"> Edit Again</a>
+
+<table>
+<% if admin? %>
+<tr>
+<td><a href="/logout_view"><button type="button">Menu</a></td></tr>
+<tr><td><button><a href="/logout">LOGOUT</a></button></td></tr>
+<%else%>
+<a href="/"><button type="button">Menu</a>
+<% end %>
+</table>

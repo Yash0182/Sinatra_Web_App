@@ -1,0 +1,11 @@
+<h2>---!ERROR 404!---</h2>
+<h3>"You typed a wrong route, this is not available"</h3>
+<table>
+<% if admin? %>
+<tr>
+<td><a href="/logout_view"><button type="button">Menu</a></td></tr>
+<tr><td><button><a href="/logout">LOGOUT</a></button></td></tr>
+<%else%>
+<a href="/"><button type="button">Menu</a>
+<% end %>
+</table>

@@ -1,0 +1,22 @@
+<h1>Student's details</h1>
+
+<div style="font-family:courier";>
+FirstName:  <%= @student.student_firstname %><br/>
+LastName:   <%= @student.student_lastname %><br/>
+Address:    <%= @student.student_address %><br/>
+Birthdate:  <%= @student.student_birthdate %><br/>
+</div>
+<br/>
+<table>
+<% if admin? %>
+<tr>
+<td><a href="/logout_view"><button type="button">Menu</a></td></tr>
+<tr><td><button><a href="/logout">LOGOUT</a></button></td></tr>
+<%else%>
+<a href="/"><button type="button">Menu</a>
+<% end %>
+</table>
+
+
+
+

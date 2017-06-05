@@ -1,0 +1,21 @@
+<!Doctype HTML>
+<html>
+<head>
+<h1>Contacts</h1>
+</head>
+<body>
+<img src ="/images/contacts.jpg" height="220" width="700" align="center">
+<p>For any concerns or any issues, Please Contact At: (408)-412-**** </p>
+<p>You can also mail me at y1bansal@scu.edu</p>
+<table>
+<% if admin? %>
+<tr>
+<td><a href="/logout_view"><button type="button">Menu</a></td></tr>
+<tr><td><button><a href="/logout">LOGOUT</a></button></td></tr>
+<%else%>
+<a href="/"><button type="button">Menu</a>
+<% end %>
+</table>
+</body>
+</html>
+

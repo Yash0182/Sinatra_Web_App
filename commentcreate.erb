@@ -1,0 +1,21 @@
+	    <h1 align = "center">ADD Comment</h1>
+		<form method="POST" action ="/comment/create" align="center">
+		<label for="comment">Enter Comment Below</label><br>
+        <input class="shortInput" id="comment" type="text" name="commentcreate[comment]" required><br>
+
+		<label for="creator">CreatorName</label><br>
+        <input class="shortInput" id="comment_creator" type="text" name="commentcreate[comment_creator]" ><br>
+		
+		<input type="submit" align="center">
+		</form>
+		<table align ="right">
+<% if admin? %>
+<tr>
+<td><a href="/logout_view"><button type="button">Menu</a></td></tr>
+<tr><td><button><a href="/logout">LOGOUT</a></button></td></tr>
+<%else%>
+<a href="/"><button type="button">Menu</a>
+<% end %>
+</table>
+		
+		

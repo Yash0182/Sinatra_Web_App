@@ -1,0 +1,32 @@
+<img src ="/images/login.png" height="280" width="720" align="center">
+<h2>Please Provide Login Credentials Below</h2>
+
+	
+<form method="POST" action ="/login" >
+<table>
+<tr>
+		<td><label for="username">Username</label></td>
+        <td><input class="shortInput" id="username" type="text" name="username"></td><br/>
+</tr>
+<tr>
+		<td><label for="password">Password</label></td>
+        <td><input class="shortInput" id="password" type="password" name="password" ></td><br/>
+</tr>	
+<tr>	
+		<td><input type="submit"></td>
+		<td>
+		<% if admin? %>
+<ul><a href="/logout_view"><button type="button">Menu</a></ul>
+<button><a href="/logout"><button type="button">LOGOUT</a></button>
+<%else%>
+<ul><a href="/"><button type="button">Menu</a></ul>
+<% end %>
+		</td>
+		</tr>
+		</table>
+		
+		</form>
+		<br/>
+		<br/>
+		<br/>
+		

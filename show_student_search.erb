@@ -1,0 +1,15 @@
+<h1>Enter student's id</h1>
+		<form method="POST" action ="/students/search" >
+		<label for="student_id">Student_id</label><br>
+        <input class="shortInput" id="student_id" type="text" name="student_id"><br>
+		<input type="submit">
+		<table>
+<% if admin? %>
+<tr>
+<td><a href="/logout_view"><button type="button">Menu</a></td></tr>
+<tr><td><button><a href="/logout">LOGOUT</a></button></td></tr>
+<%else%>
+<a href="/"><button type="button">Menu</a>
+<% end %>
+</table>
+		</form>

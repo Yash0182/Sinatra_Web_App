@@ -1,0 +1,37 @@
+		
+		<form method="POST" action="/students/add/<%= @students.student_id %>">
+		<input type="hidden" name="_method" value="PUT" />
+		Previously Stored Record For Student_id: <%= @students.student_id %><br/><br/>
+		Please Provide New DetailsBelow Itself:
+		<br/>
+		
+		<table>
+		<tr><td><label for="id" name="student[student_id]" value="<%= @students.student_id %>Student's ID:</label></td>
+		
+		<tr><td><label for="name">First Name:</label></td>
+        <td><input class="shortInput" id="name" type="text" name="student[student_firstname]" value="<%= @students.student_firstname %>"></td>
+</tr>
+		<tr><td><label for="last_name">Last Name: </label></td>
+        <td><input class="shortInput" id="last_name" type="text" name="student[student_lastname]" value="<%= @students.student_lastname %>"></td>
+	</tr>	
+        <tr><td><label for="birthday">Birthdate:  </label></td>
+        <td><input class="shortInput" id="birthday" type="text" name="student[student_birthdate]" value="<%= @students.student_birthdate %>"></td>
+</tr>
+        <tr><td><label for="address">Address:     </label></td>
+        <td><input class="shortInput" id="address" type="text" name="student[student_address]" value="<%= @students.student_address %>"></td>
+		</tr>
+		<tr><td><input type="submit"></td></tr>
+		</table>
+		</form>
+		
+		<table>
+<% if admin? %>
+<tr>
+<td><a href="/logout_view"><button type="button">Menu</a></td></tr>
+<tr><td><button><a href="/logout">LOGOUT</a></button></td></tr>
+<%else%>
+<a href="/"><button type="button">Menu</a>
+<% end %>
+</table>
+      
+

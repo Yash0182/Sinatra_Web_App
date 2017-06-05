@@ -1,0 +1,24 @@
+<h1> Comments</h1>
+<img src ="/images/comment1.jpg" height="320" width="700" align="center">
+<br/>
+<h3><a href = "/createcomment"> Add new comment!</a><br/></h3>
+<h2>Previous Comments</h2>
+ <% if @comments.any? %>
+  <%@comments.each do|eachcomment| -%>
+  <ul>
+  <li>
+  <a href= "/comments/<%= eachcomment.comment_id %>"><%= eachcomment.comment %></a>&nbsp At: <%= eachcomment.created_at %><br/></li>
+  </ul>
+  <%end -%>
+  <%end%>
+ 
+  <table>
+<% if admin? %>
+<tr>
+<td><a href="/logout_view"><button type="button">Menu</a></td></tr>
+<tr><td><button><a href="/logout">LOGOUT</a></button></td></tr>
+<%else%>
+<a href="/"><button type="button">Menu</a>
+<% end %>
+</table>
+  
